@@ -12,6 +12,10 @@ Así que con WDR_TASK=>APPLICATION->CONFIGURATION_ID desde cualquier sitio.
 
 G:\Micrin\Lanzador\LWS\AdmLanzadorNet\AdmLanzadorNet.exe /install
 
+* Help SAP about wd_get_api:
+http://help.sap.com/saphelp_nw70/helpdata/EN/46/a079a279822c10e10000000a114a6b/content.htm?frameset=/EN/aa/0b8b85dce1a941b78eb3aedf47a378/frameset.htm&current_toc=/en/fc/501b42b5815133e10000000a155106/plain.htm&node_id=748
+http://help.sap.com/saphelp_nw70/helpdata/EN/61/497941761b070de10000000a1550b0/frameset.htm
+
 g_pernr = cl_hress_employee_services =>get_instance( ) ->get_pernr( ).
 
    DATA lo_wd_component TYPE REF TO if_wd_component.  
