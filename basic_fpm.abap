@@ -68,3 +68,19 @@ HR_GET_USER_FROM_EMPLOYEE
                lo_fpm              type ref to if_fpm. 
 *----- no changes: inform user 
               lo_fpm = cl_fpm_factory =>get_instance( ). 
+
+
+
+  " Comprobamos la configuración de la aplicación para que sea la de ONEHR
+  lo_fpm ?= cl_fpm=>get_instance( ).
+  lo_fpm_parameter ?= lo_fpm->mo_app_parameter.
+
+  CALL METHOD LO_FPM_PARAMETER->IF_FPM_PARAMETER~GET_VALUE
+    EXPORTING
+      IV_KEY   = 'WDCONFIGURATIONID'
+    IMPORTING
+      EV_VALUE = lv_config_id
+      .
+
+
+  if lv_config_id = 'ZHR_ASR_EXECUTE_5_STEP_PA'. 
