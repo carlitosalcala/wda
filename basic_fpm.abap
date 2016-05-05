@@ -9,6 +9,8 @@ APPLICATION_NAME
 ADAPTATION_MANAGER 
 
 Así que con WDR_TASK=>APPLICATION->CONFIGURATION_ID desde cualquier sitio.
+ó
+lv_config_id  = wdr_task=>application->if_wdr_application~application_info->get_property( 'WDCONFIGURATIONID' ).
 
 G:\Micrin\Lanzador\LWS\AdmLanzadorNet\AdmLanzadorNet.exe /install
 
